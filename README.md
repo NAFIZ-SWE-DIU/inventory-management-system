@@ -55,7 +55,11 @@ DB_PASSWORD=
 ## Run the database migrations:
 php artisan migrate
 
+<<<<<<< HEAD
 ## Create migration for products table
+=======
+# Create migration for products table
+>>>>>>> 80d9aa5d7abb6fb60101b31c857892fdeaafa256
 php artisan make:migration create_products_table
 
 ## Seeding Initial Data
@@ -68,6 +72,7 @@ php artisan serve
 ## Accessing Product Management
 1. Register a new user or login if you already have an account.
 2. Once logged in, navigate to the "Product Management" section to add, view, update, and delete product details.
+<<<<<<< HEAD
 
 
 # Owner
@@ -75,3 +80,5 @@ Nafizul Islam
 Nafizulislam.swe@gmail.com
 +880 1737 226404
 +880 1568 879478
+=======
+>>>>>>> 80d9aa5d7abb6fb60101b31c857892fdeaafa256
