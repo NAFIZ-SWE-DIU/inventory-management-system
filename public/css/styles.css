@@ -147,6 +147,11 @@ body {
     background: darkorange;
 }
 
+.alert{
+    color: green;
+    font-size: 16px;
+    margin: 20px 0;
+}
 /* Responsive styles */
 @media (max-width: 600px) {
     .btn {

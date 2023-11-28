@@ -50,10 +50,10 @@ class ProductController extends Controller
                 'price' => $request->input('price'),
             ]);
 
-            return redirect()->route('products.index')->with('success', 'Product updated successfully');
+            return redirect()->route('products.index')->with('success', 'Product updated successfully!');
         } catch (\Exception $e) {
             // Handle exceptions, such as a model not found exception
-            return redirect()->route('products.index')->with('error', 'Error updating product');
+            return redirect()->route('products.index')->with('error', 'Error updating product!');
         }
     }
 
@@ -70,24 +70,15 @@ class ProductController extends Controller
         $product->save();
 
         // Redirect to the index page
-        return redirect()->route('products.index')->with('success', 'Product added successfully');
+        return redirect()->route('products.index')->with('success', 'Product added successfully!');
     }
 
     public function destroy($id)
     {
-        try {
-            // Find the product with the given ID
-            $product = Product::findOrFail($id);
+        $product = Product::findOrFail($id);
+        $product->delete();
 
-            // Delete the product
-            $product->delete();
-
-            // Redirect with a success message
-            return redirect()->route('products.index')->with('success', 'Product deleted successfully');
-        } catch (\Exception $e) {
-            // Handle exceptions, such as a model not found exception
-            return redirect()->route('products.index')->with('error', 'Error deleting product');
-        }
+        return redirect()->route('products.index')->with('success', 'Product deleted successfully!');
     }
 
 

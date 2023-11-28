@@ -3,6 +3,14 @@
 @section('content')
     <div class="container">
         <h2>Product List</h2>
+        
+        <!-- Check for success message and display it -->
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <a href="{{ route('products.create') }}" class="product-add">Add Product</a>
         <table class="table mt-3">
             <thead>

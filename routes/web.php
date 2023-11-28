@@ -26,8 +26,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/store', [ProductController::class, 'store']);
 Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
 Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
-
+Route::resource('products', ProductController::class);
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
