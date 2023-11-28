@@ -64,6 +64,13 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8 offset-md-4">
+                                <p>
+                                    {{ __("Don't have an account?") }} <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </p>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

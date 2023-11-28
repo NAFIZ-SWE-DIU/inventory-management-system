@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h2>Product List</h2>
-        <a href="{{ route('products.create') }}" class="btn btn-primary">Add Product</a>
+        <a href="{{ route('products.create') }}" class="product-add">Add Product</a>
         <table class="table mt-3">
             <thead>
                 <tr>
@@ -20,13 +20,16 @@
                         <td>{{ $product->id }}</td>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->quantity }}</td>
-                        <td>${{ $product->price }}</td>
+                        <td>{{ $product->price }}৳</td>
                         <td>
-                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                            <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline">
+                            <a href="{{ route('products.edit', $product->id) }}">
+                            <button class="product-edit"> Edit </button>
+                            </a>
+                            <form method="POST" action="{{ route('products.destroy', $product->id) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                
+                                <button type="submit" class="product-delete" onclick="return confirm('Are you sure?')">Delete</button>
                             </form>
                         </td>
                     </tr>

@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h2>Edit Product</h2>
+        <h2>Update Product</h2>
 
         <form action="{{ route('products.update', $product->id) }}" method="POST">
             @csrf
@@ -20,7 +20,6 @@
                     </ul>
                 </div>
             @endif
-            
 
             <div class="form-group">
                 <label for="name">Name:</label>

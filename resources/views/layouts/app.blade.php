@@ -46,6 +46,9 @@
                 </li>
                 @auth
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/home') }}">My Profile</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('products.index') }}">Product List</a>
                     </li>
                     <li class="nav-item">

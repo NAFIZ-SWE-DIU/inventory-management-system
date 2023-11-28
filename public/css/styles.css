@@ -14,6 +14,11 @@ body {
     padding: 10px;
 }
 
+.container h2{
+    margin: 20px auto;
+    color: #18b3c7;
+}
+
 .form-check{
     display: flex;
     font-size: 14px;
@@ -101,6 +106,47 @@ body {
     border-color: #0bc2da;
 }
 
+.login-message {
+    color: green;
+}
+
+.product-delete, .product-edit{
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    list-style: none;
+    text-decoration: none;
+    margin: 5px auto;
+    width: 55px;
+}
+
+.product-add{
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #0bc2da;
+    text-decoration: none;
+    margin: 5px auto;
+    width: 150px;
+    text-align: center;
+    background: #18b3c7;
+}
+
+.product-delete:hover, .product-edit:hover{
+    background: #0bc2da;
+}
+
+.product-delete{
+    background: #dc3545;
+}
+
+.product-edit{
+    background: darkorange;
+}
+
 /* Responsive styles */
 @media (max-width: 600px) {
     .btn {
@@ -152,12 +198,48 @@ header h1 {
             margin: 10px;
             padding: 15px;
             width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s;
+        }
+        
+        .product:hover {
+            transform: scale(1.1);
+        }
+
+        .order-cart {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+        }
+
+        .order-cart button{
+            margin: auto;
+            width: 40%;
+            padding: 5px;
+            color: #fff;
+            border: 1px solid #18b3c7;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .order{
+            background: #18c793;
+        }
+
+        .cart{
+            background: #18b3c7;
+        }
+
+        .order-cart button:hover{
+           background: #0cbdd4;
         }
 
         .product img {
             max-width: 100%;
-            height: 200px; /* Set a fixed height for all images */
-            object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
+            height: 180px;
+            object-fit: cover;
             border-radius: 4px;
         }
 
