@@ -75,10 +75,10 @@ php artisan serve
 <<<<<<< HEAD
 
 
-# Owner
-Nafizul Islam
-Nafizulislam.swe@gmail.com
-+880 1737 226404
-+880 1568 879478
+### Owner
+#### Nafizul Islam
+#### Nafizulislam.swe@gmail.com
+#### +880 1737 226404
+#### +880 1568 879478
 =======
 >>>>>>> 80d9aa5d7abb6fb60101b31c857892fdeaafa256
