@@ -1,0 +1,96 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #18b3c7;
+    border-bottom: 1px solid #0bc2da;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    padding: 10px 20px;
+}
+
+.navigation-menu {
+    max-width: 300px;
+    margin: auto 20px auto auto;
+    padding: 10px;
+}
+
+ul, li {
+    list-style: none;
+    text-underline-offset: none;
+}
+
+.navbar-brand img {
+    max-height: 40px; 
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    flex: 1; 
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    display: none; /* Hide the order list icon on larger screens */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar-nav .nav-link {
+    color: #fff; 
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #0cbdd4; 
+}
+
+@media (min-width: 769px) {
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-toggler {
+        display: none; /* Hide the toggle button on larger screens */
+    }
+
+    .navbar-nav .nav-item {
+        display: block !important; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+
+    .navbar-nav .nav-item {
+        display: none; /* Hide menu items on smaller screens by default */
+    }
+
+    .navbar-nav.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff; 
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+}
